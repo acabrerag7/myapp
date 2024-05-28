@@ -1,0 +1,172 @@
+
+body {
+  
+  background-image: url('images/fondo2.jpg');
+  background-size: cover; /* Cubre todo el espacio disponible sin perder proporciones */
+  background-position: center; /* Centra la imagen en el elemento */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #333;
+  min-height: 100vh; /* Corregido de 10vh a 100vh para que cubra toda la altura de la vista */
+}
+
+
+form {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 75px; 
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 350px;
+  background-color: #fff;
+
+}
+
+form h2 {
+  font-size: 35px;
+  color: #0D0D0D;
+  margin: 0;
+}
+
+form p {
+  font-size: 16px;
+  color: #5e5e5e;
+  margin-bottom: 30px; 
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center; /* Alinea verticalmente el input y el ícono */
+  margin-bottom: 20px; /* Espacio entre cada grupo input-ícono */
+}
+
+input {
+  flex-grow: 1; /* El input toma el máximo espacio posible */
+  padding: 15px 20px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none; /* Elimina el contorno al enfocar */
+}
+
+
+input::placeholder {
+  font-size: 16px;
+  color: #bbbbe2;
+}
+
+
+
+
+.input-icon {
+  position: absolute; /* Posiciona el ícono de manera absoluta respecto al .input-wrapper */
+  left: 0; /* Coloca el ícono en el extremo izquierdo del .input-wrapper */
+  padding-right: 10px; /* Espacio a la derecha del ícono para evitar que toque directamente el input */
+  z-index: 10; /* Asegura que el ícono se muestre sobre el input si es necesario */
+  transform: translateX(-100%); /* Desplaza el ícono a la izquierda fuera del área visible del input */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px; /* Ancho fijo para el ícono */
+  height: 20px; /* Altura fija para el ícono */
+}
+
+
+.bth {
+  padding: 15px 30px; /* Ajustado el padding para un aspecto más equilibrado */
+  background: linear-gradient(50deg, rgba(140, 43, 231, 1) 25%, rgba(61, 1, 245, 1) 80%);
+  text-transform: uppercase;
+  font-size: 16px; /* Aumentado ligeramente el tamaño de la fuente */
+  cursor: pointer;
+  border: none; /* Eliminado el borde para un aspecto más limpio */
+  border-radius: 25px; /* Ajustado el radio del borde */
+  transition: background-color 0.3s ease; /* Añadida una transición suave para el cambio de color de fondo */
+  color: white; /* Color del texto en blanco */
+  display: block; /* Cambiado a bloque para centrar */
+  margin: 0 auto; /* Margen automático para centrar horizontalmente */
+  font-family: "Noto Sans JP", sans-serif; /* Cambiado a una fuente específica */
+}
+
+.bth:hover {
+  background: rgb(131, 19, 236);
+}
+
+
+.success {
+  position: absolute;
+  top: 100px;
+  color: #00C83C;
+  font-size:  18px;
+}
+
+.successfooter {
+  position: absolute;
+  top: 0px;
+  color: #00C83C;
+  font-size:  18px;
+}
+
+.error {
+  position: absolute;
+  top: 50px;
+  color: #e01d00;
+  font-size:  18px;
+}
+
+@media(max-width:911px){
+  body{
+      padding: 10px;
+  }
+  form{
+      padding: 20px;
+      width: 88%;
+  }
+  .imput-wrapper{
+      position: relative;
+      width: 88%;
+      margin-bottom: 35px;
+  }
+  input{
+      padding: 20px 0 20px 45px; /* Ajustado el padding */
+  }
+  .input-icon{
+      height: 20px;
+      width: 20px;
+  }
+}      
+
+.resultado {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.resultado label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.resultado p {
+  margin-bottom: 20px;
+}
+
+.resultado button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.resultado button:hover {
+  background-color: #45a049;
+}
